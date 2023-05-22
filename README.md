@@ -78,9 +78,10 @@ yarn add sequelize-json-polyfill
 require("sequelize-json-polyfill");
 
 // ...
-
-const items = await Item.findAll()
-console.log(items[0].toJSON())
+(async () => {
+    const items = await Item.findAll()
+    console.log(items[0].toJSON())
+})()
 ```
 
 
